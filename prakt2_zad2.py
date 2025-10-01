@@ -2,7 +2,7 @@
 import random
 
 values = set([random.randint(0, 100) for _ in range(int(input("Введите количество участников: ")))])
-student = int(input("Баллы ученика: "))
+student = random.randint(0, 100) #баллы Стаса
 
 def check_winners(scores, student_score):
     winners = sorted(list(scores)[-1:-4])
