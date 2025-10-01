@@ -9,6 +9,6 @@ def check_winners(scores, student_score):
     if student_score in winners:
         print("Вы в тройке победителей!")
     else:
-        print("Вы не попали в тройку победителей.")
+        print("Вы не попали в тройку победителей!")
 check_winners(values, student)
 
