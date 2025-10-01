@@ -6,7 +6,7 @@ def generator(lenght, low, high, num, dig):
     alphabet_big = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     alphabet_small = "abcdefghijklmnopqrstuvwxyz"
     numbers = "1234567890"
-    digits = "!@#$%^&*()_+-=[]{}|;:,.<>/?"
+    digits = "!@#$%^&*()_+-=[]{}|;:,.<>?"
 
     a = []
     proof = low+high+num+dig
