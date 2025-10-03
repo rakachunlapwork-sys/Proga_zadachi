@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb70ccda-1c21-4e97-85ac-e2eaafa956c5" name="Changes" comment="passwords" />
+    <list default="true" id="fb70ccda-1c21-4e97-85ac-e2eaafa956c5" name="Changes" comment="passwords + update">
+      <change afterPath="$PROJECT_DIR$/prakt2_zad5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,23 +47,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.prakt2_zad1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.prakt2_zad2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.prakt2_zad3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.prakt2_zad4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proga1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proga2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proga3.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.prakt2_zad1.executor": "Run",
+    "Python.prakt2_zad2.executor": "Run",
+    "Python.prakt2_zad3.executor": "Run",
+    "Python.prakt2_zad4.executor": "Run",
+    "Python.prakt2_zad5.executor": "Run",
+    "Python.proga1.executor": "Run",
+    "Python.proga2.executor": "Run",
+    "Python.proga3.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
-  <component name="RunManager" selected="Python.prakt2_zad4">
+}]]></component>
+  <component name="RunManager" selected="Python.prakt2_zad5">
     <configuration name="prakt2_zad1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Proga_Zadachki" />
       <option name="ENV_FILES" value="" />
@@ -149,7 +153,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="proga3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="prakt2_zad5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Proga_Zadachki" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,7 +166,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proga3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prakt2_zad5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.prakt2_zad5" />
         <item itemvalue="Python.prakt2_zad4" />
         <item itemvalue="Python.prakt2_zad3" />
         <item itemvalue="Python.prakt2_zad2" />
         <item itemvalue="Python.prakt2_zad1" />
-        <item itemvalue="Python.proga3" />
       </list>
     </recent_temporary>
   </component>
@@ -308,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759478921482</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="passwords + update">
+      <option name="closed" value="true" />
+      <created>1759479398677</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1759479398677</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -322,6 +334,7 @@
     <MESSAGE value="ust" />
     <MESSAGE value="bakery" />
     <MESSAGE value="passwords" />
-    <option name="LAST_COMMIT_MESSAGE" value="passwords" />
+    <MESSAGE value="passwords + update" />
+    <option name="LAST_COMMIT_MESSAGE" value="passwords + update" />
   </component>
 </project>
