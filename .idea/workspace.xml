@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb70ccda-1c21-4e97-85ac-e2eaafa956c5" name="Changes" comment="+length">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fb70ccda-1c21-4e97-85ac-e2eaafa956c5" name="Changes" comment="passwords" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +19,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -45,20 +44,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.proga1.executor": "Run",
-    "Python.proga2.executor": "Run",
-    "Python.proga3.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.prakt2_zad1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prakt2_zad2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prakt2_zad3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prakt2_zad4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proga1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proga2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.proga3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.proga3">
-    <configuration name="proga1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Python.prakt2_zad4">
+    <configuration name="prakt2_zad1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Proga_Zadachki" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,7 +74,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proga1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prakt2_zad1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -80,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="proga2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="prakt2_zad2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Proga_Zadachki" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,7 +96,51 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proga2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prakt2_zad2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="prakt2_zad3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proga_Zadachki" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prakt2_zad3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="prakt2_zad4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proga_Zadachki" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prakt2_zad4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,9 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.prakt2_zad4" />
+        <item itemvalue="Python.prakt2_zad3" />
+        <item itemvalue="Python.prakt2_zad2" />
+        <item itemvalue="Python.prakt2_zad1" />
         <item itemvalue="Python.proga3" />
-        <item itemvalue="Python.proga2" />
-        <item itemvalue="Python.proga1" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +236,71 @@
       <option name="project" value="LOCAL" />
       <updated>1758722360574</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new file">
+      <option name="closed" value="true" />
+      <created>1759297017099</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759297017099</updated>
+    </task>
+    <task id="LOCAL-00007" summary="new big sdvig">
+      <option name="closed" value="true" />
+      <created>1759300871720</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759300871720</updated>
+    </task>
+    <task id="LOCAL-00008" summary="new task">
+      <option name="closed" value="true" />
+      <created>1759302504143</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759302504143</updated>
+    </task>
+    <task id="LOCAL-00009" summary="new task">
+      <option name="closed" value="true" />
+      <created>1759302889357</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1759302889357</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ust">
+      <option name="closed" value="true" />
+      <created>1759303791932</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1759303791932</updated>
+    </task>
+    <task id="LOCAL-00011" summary="bakery">
+      <option name="closed" value="true" />
+      <created>1759304701301</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759304701301</updated>
+    </task>
+    <task id="LOCAL-00012" summary="passwords">
+      <option name="closed" value="true" />
+      <created>1759306668286</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1759306668286</updated>
+    </task>
+    <task id="LOCAL-00013" summary="passwords">
+      <option name="closed" value="true" />
+      <created>1759306764181</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1759306764181</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -195,6 +308,12 @@
     <MESSAGE value="1 programm" />
     <MESSAGE value="2 programm" />
     <MESSAGE value="+length" />
-    <option name="LAST_COMMIT_MESSAGE" value="+length" />
+    <MESSAGE value="new file" />
+    <MESSAGE value="new big sdvig" />
+    <MESSAGE value="new task" />
+    <MESSAGE value="ust" />
+    <MESSAGE value="bakery" />
+    <MESSAGE value="passwords" />
+    <option name="LAST_COMMIT_MESSAGE" value="passwords" />
   </component>
 </project>
