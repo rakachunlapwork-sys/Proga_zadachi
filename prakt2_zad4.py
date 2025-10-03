@@ -31,11 +31,21 @@ def generator(lenght, low, high, num, dig):
         s+=random.choice(a)
     print(s)
 
-print("Добро пожаловать в генератор паролей!")
-lenght = int(input("Введите желаемую длину пароля: "))
-low = int(input("Введите количество символов в нижнем регистре: "))
-high = int(input("Введите количество символов в верхнем регистре: "))
-numbers = int(input("Введите количество цифр: "))
-digits = int(input("Введите количество специальных символов: "))
+lenght = 1
+low = 0
+high = 0
+numbers = 0
+digits = 0
 
-generator(lenght, low, high, numbers, digits)
+proof = low+high+numbers+digits
+
+while proof!=lenght:
+    print("Добро пожаловать в генератор паролей!")
+    lenght = int(input("Введите желаемую длину пароля: "))
+    low = int(input("Введите количество символов в нижнем регистре: "))
+    high = int(input("Введите количество символов в верхнем регистре: "))
+    numbers = int(input("Введите количество цифр: "))
+    digits = int(input("Введите количество специальных символов: "))
+    proof = low + high + numbers + digits
+
+    generator(lenght, low, high, numbers, digits)
