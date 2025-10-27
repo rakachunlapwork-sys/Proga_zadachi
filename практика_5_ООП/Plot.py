@@ -1,13 +1,14 @@
 import Knight_and_Dragon as kd
 import random
 import time
+import sys 
 
 print('Добро пожаловать в игру "Dragon&Knight" !')
 print()
 game = input("Введите play, чтобы начать игру : ").lower()
 print()
 while game!="play":
-    game = input("Введите play, чтобы начать игру : ")
+    game = input("Введите play, чтобы начать игру : ").lower()
 print()
 print('''В давние времена было так принято, что любой рыцарь должен был совершить подвиг...
 Если рыцарь не совершил подвиг, то он и не рыцарь никакой, так было принято в те времена.
@@ -116,48 +117,70 @@ if choice_1 == "1":
         print()
         print("Голем:")
         print()
-        print("Нападай, ты вссё равно не победишь!")
+        print("Нападай, ты всё равно не победишь!")
         print()
         print(f"Ваш ход, {knight.name}")
         print()
-        hit = int(input("Нажмите 1, чтобы ударить : "))
-        while hit!=1:
-            hit = int(input("Нажмите 1, чтобы ударить : "))
+        hit = input("Нажмите 1, чтобы ударить : ")
+        while hit!="1":
+            hit = input("Нажмите 1, чтобы ударить : ")
+        k = 0
         while knight.health>0 or gollem.health>0:
+            knight.attack_power = random.randint(5, 8)
+            if knight.health<0 or gollem.health<0:
+                break
             print("Ваша атака : ")
             print()
             knight.attack_power = random.randint(5, 8)
             gollem.attack_power = random.randint(8, 12)
             gollem.choice = random.choice(["hit", "jump"])
             gollem.health-=knight.attack_power
+            if knight.health<0 or gollem.health<0:
+                break
             print(f"Здоровье {knight.name} : {knight.health}, Здоровье Голема : {gollem.health}")
             print()
             time.sleep(2)
+            print("Атака волка: ")
+            print()
+            print("Подсказка ^на Голема волк может только рычат, но это даёёт свои плоды^")
+            print()
+            if k%2==0:
+                woolf.choice = "auf"
+                print("Волчий рык!")
+                gollem.attack_power = random.randint(6, 9)
+                gollem.health-=2
+            print()
             print("Атака голема: ")
             print()
             if gollem.choice=="hit":
                 print("Обычный удар голема")
                 print()
                 knight.health-=gollem.attack_power
+                if knight.health<0 or gollem.health<0:
+                    break
             else:
                 knight.health-=gollem.attack_power
                 print("хаха, теперь твоя атака ослабла!")
                 print()
-                for i in range(10, 0):
-                    time.sleep(1)
-                    knight.attack_power = random.randint(2, 5)
-            knight.attack_power = random.randint(5, 8)
+                knight.attack_power = random.randint(2, 5)
+                if knight.health<0 or gollem.health<0:
+                    break
+            
             print(f"Здоровье {knight.name} : {knight.health}, Здоровье Голема : {gollem.health}")
             print()
             time.sleep(2)
             print("Ваша атака : ")
             gollem.health-=knight.attack_power
+            if knight.health<0 or gollem.health<0:
+                break
             print(f"Здоровье {knight.name} : {knight.health}, Здоровье Голема : {gollem.health}")
             print()
             time.sleep(2)
-        if knight.health==0:
+            k+=1
+        if knight.health<0:
             print("Вы погибли")
-        elif gollem.health==0:
+            sys.exit()
+        elif gollem.health<0:
             print("Вы победили Голема!")
 
             
