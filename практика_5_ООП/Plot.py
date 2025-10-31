@@ -142,7 +142,7 @@ if choice_1 == "1":
             time.sleep(2)
             print("Атака волка: ")
             print()
-            print("Подсказка ^на Голема волк может только рычат, но это даёёт свои плоды^")
+            print("Подсказка ^на Голема волк может только рычит, но это даёт свои плоды^")
             print()
             if k%2==0:
                 woolf.choice = "auf"
@@ -181,11 +181,126 @@ if choice_1 == "1":
             print("Вы погибли")
             sys.exit()
         elif gollem.health<0:
-            print("Вы победили Голема!")
-
-            
-            
+            print(f"Поздравляем {knight.name}, Вы победили Голема!")
+            print()
+            print("Голем: ")
+            print()
+            print("Тыыы...")
+            time.sleep(2)
+            print("Неужели это сделал ты")
+            time.sleep(2)
+            print("Ты силён, дитя человека!")
+            time.sleep(2)
+            print("Спасибо, что освободил меня, теперь я отправлюсь в другой мир!")
+            time.sleep(2)
+            print("Как и обещал, я дарую тебе подарок")
+            print("Сломай этот валун, там ты найдёшь 1 из волшебных предметов")
+            print("Тебе придётся придётся тяжко против Дракониуса, удачи...")
+            time.sleep(2)
+            print("После смерти Голема закат побагровел и вокруг каменных груд выросли розы и тюльпаны")
+            open_stone = ["sword", "guitar", "eggs"]
+            choice_stone = random.choice(open_stone)
+            open = input("Введите open, чтобы сломать валун : ").lower()
+            knight.health = 120
+            while open!="open":
+                open = input("Введите open, чтобы сломать валун : ").lower()
+            print(f"Поздравляем, {knight.name}, теперь у вас есть новый предмет {choice_stone}")
+            knight.choice = random.choice(open_stone)
+            print()
+            print("Голем повержен, но главный враг ещё впереди!")
+            print()
+            print("Спустя несколько дней скитаний вы всё таки взобрались на драконью гору, поздравляем!")
+            print("Добро пожаловать в логово Дракониуса!")
+            print()
+            dragon = kd.Dragon("Дракониус", random.randint(10, 15), 200, random.choice(["Файрбол", "Пинок"]))
+            print("Дракониус: ")
+            print()
+            print("Я знал, что кто-то придёт по мою душу, но никто уже отсюда не уйдёт!")
+            print()
+            print("Битва с Дракониусом: ")
+            print()
+            print(f"Ваш ход, {knight.name}")
+            print()
+            hit2 = input("Нажмите 1, чтобы ударить : ")
+            while hit2!="1":
+                hit2 = input("Нажмите 1, чтобы ударить : ")
+            k2 = 0
+            while knight.health>0 or dragon.health>0:
+                knight.attack_power = random.randint(5, 8)
+                if knight.health<0 or dragon.health<0:
+                    break
+                print("Ваша атака : ")
+                print()
+                knight.attack_power = random.randint(5, 8)
+                dragon.attack_power = random.randint(10, 15)
+                if knight.choice=="eggs":
+                    print("Eggs!")
+                    print()
+                    dragon.health-=10
+                    knight.health+=2
+                    if knight.health<0 or dragon.health<0:
+                        break
+                elif knight.choice=="guitar":
+                    print("Guitar!")
+                    print()
+                    dragon.health-=12
+                    dragon.attack_power = random.randint(5, 8)
+                    if knight.health<0 or dragon.health<0:
+                        break
+                else:
+                    dragon.health-=15
+                    print("Sword!")
+                    print()
+                    dragon.attack_power = random.randint(8, 10)
+                    if knight.health<0 or dragon.health<0:
+                        break
+                if knight.health<0 or dragon.health<0:
+                    break
+                dragon.choice = random.choice(["Файрбол", "Пинок"])
+                if knight.health<0 or dragon.health<0:
+                    break
+                print(f"Здоровье {knight.name} : {knight.health}, Здоровье Голема : {dragon.health}")
+                print()
+                time.sleep(2)
+                print("Атака волка: ")
+                print()
+                print("Подсказка ^на Голема волк может только рычит, но это даёт свои плоды^")
+                print()
+                if k2%2==0:
+                    woolf.choice = "auf"
+                    print("Волчий рык!")
+                    dragon.attack_power = random.randint(6, 9)
+                    dragon.health-=2
+                print()
+                print("Атака Дракониуса: ")
+                print()
+                if dragon.choice=="Файрбол":
+                    print("Fireball !")
+                    print()
+                    knight.health-=dragon.attack_power
+                    if knight.health<0 or dragon.health<0:
+                        break
+                else:
+                    knight.health-=dragon.attack_power
+                    print("хаха, теперь твоя атака ослабла!")
+                    print()
+                    knight.attack_power = random.randint(2, 5)
+                    if knight.health<0 or dragon.health<0:
+                        break
+                print("Ваша атака : ")
+                dragon.health-=knight.attack_power
+                print("Обычный удар!")
+                print()
+                print(f"Здоровье {knight.name} : {knight.health}, Здоровье Голема : {dragon.health}")
+                print()
+                time.sleep(2)
                 
-
-
-        
+                print(f"Здоровье {knight.name} : {knight.health}, Здоровье Голема : {dragon.health}")
+                print()
+                time.sleep(2)
+                k2+=1
+            if knight.health<0:
+                print("Вы погибли")
+                sys.exit()
+            elif dragon.health<0:
+                print(f"Поздравляем {knight.name}, Вы победили Дракониуса!")
