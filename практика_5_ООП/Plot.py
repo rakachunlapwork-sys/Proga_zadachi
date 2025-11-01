@@ -259,7 +259,7 @@ if choice_1 == "1":
                 dragon.choice = random.choice(["Файрбол", "Пинок"])
                 if knight.health<0 or dragon.health<0:
                     break
-                print(f"Здоровье {knight.name} : {knight.health}, Здоровье Голема : {dragon.health}")
+                print(f"Здоровье {knight.name} : {knight.health}, Здоровье Дракониуса : {dragon.health}")
                 print()
                 time.sleep(2)
                 print("Атака волка: ")
@@ -291,11 +291,7 @@ if choice_1 == "1":
                 dragon.health-=knight.attack_power
                 print("Обычный удар!")
                 print()
-                print(f"Здоровье {knight.name} : {knight.health}, Здоровье Голема : {dragon.health}")
-                print()
-                time.sleep(2)
-                
-                print(f"Здоровье {knight.name} : {knight.health}, Здоровье Голема : {dragon.health}")
+                print(f"Здоровье {knight.name} : {knight.health}, Здоровье Дракониуса : {dragon.health}")
                 print()
                 time.sleep(2)
                 k2+=1
@@ -304,3 +300,346 @@ if choice_1 == "1":
                 sys.exit()
             elif dragon.health<0:
                 print(f"Поздравляем {knight.name}, Вы победили Дракониуса!")
+
+    elif choice_2 == "1":
+        print(f'''Вас можно понять, {knight.name}, вы убили агрессивное животное, потому что побоялись за свою жизнь,
+но не обернётся ли это катастрофой для вас?''')
+        print()
+        print('''Когда вы убили волка, он издал жалобный дотошный крик,
+Вам стало не по себе, начался гром,
+Вы стали слышать странные звуки приближения чего-то большого и побежали из лесу.
+Перед вами поле, нэйм, путь к драконьей горе будет в несколько раз дольше через поле, но безопаснее.
+Случайно вы натыкаетесь на бугорок...
+О, что же это?''')
+        time.sleep(2)
+        open_stone = ["sword", "guitar", "eggs"]
+        choice_stone = random.choice(open_stone)
+        print(f"Поздравляем, {knight.name}, теперь у вас есть новый предмет {choice_stone}")
+        print()
+        print("Спустя неделю...")
+        time.sleep(2)
+        print()
+        print("Вы взобрались на драконью гору, наконец-то!")
+        print("Добро пожаловать в логово Дракониуса!")
+        print()
+        dragon = kd.Dragon("Дракониус", random.randint(10, 15), 200, random.choice(["Файрбол", "Пинок"]))
+        print("Дракониус: ")
+        print()
+        print("Я знал, что кто-то придёт по мою душу, но никто уже отсюда не уйдёт!")
+        print()
+        print("Битва с Дракониусом: ")
+        print()
+        print(f"Ваш ход, {knight.name}")
+        print()
+        hit2 = input("Нажмите 1, чтобы ударить : ")
+        while hit2!="1":
+            hit2 = input("Нажмите 1, чтобы ударить : ")
+        while knight.health>0 or dragon.health>0:
+            knight.attack_power = random.randint(5, 8)
+            if knight.health<0 or dragon.health<0:
+                break
+            print("Ваша атака : ")
+            print()
+            knight.attack_power = random.randint(5, 8)
+            dragon.attack_power = random.randint(10, 15)
+            if knight.choice=="eggs":
+                print("Eggs!")
+                print()
+                dragon.health-=10
+                knight.health+=2
+                if knight.health<0 or dragon.health<0:
+                    break
+            elif knight.choice=="guitar":
+                print("Guitar!")
+                print()
+                dragon.health-=12
+                dragon.attack_power = random.randint(5, 8)
+                if knight.health<0 or dragon.health<0:
+                    break
+            else:
+                dragon.health-=15
+                print("Sword!")
+                print()
+                dragon.attack_power = random.randint(8, 10)
+                if knight.health<0 or dragon.health<0:
+                    break
+            if knight.health<0 or dragon.health<0:
+                break
+            dragon.choice = random.choice(["Файрбол", "Пинок"])
+            if knight.health<0 or dragon.health<0:
+                break
+            print(f"Здоровье {knight.name} : {knight.health}, Здоровье Дракониуса : {dragon.health}")
+            print()
+            time.sleep(2)
+            print()
+            print("Атака Дракониуса: ")
+            print()
+            if dragon.choice=="Файрбол":
+                print("Fireball !")
+                print()
+                knight.health-=dragon.attack_power
+                if knight.health<0 or dragon.health<0:
+                    break
+            else:
+                knight.health-=dragon.attack_power
+                print("хаха, теперь твоя атака ослабла!")
+                print()
+                knight.attack_power = random.randint(2, 5)
+                if knight.health<0 or dragon.health<0:
+                    break
+            print("Ваша атака : ")
+            dragon.health-=knight.attack_power
+            print("Обычный удар!")
+            print()
+            print(f"Здоровье {knight.name} : {knight.health}, Здоровье Дракониуса : {dragon.health}")
+            print()
+            time.sleep(2)
+        if knight.health<0:
+            print("Вы погибли")
+            sys.exit()
+        elif dragon.health<0:
+            print(f"Поздравляем {knight.name}, Вы победили Дракониуса!")        
+            print()
+            time.sleep(2)
+            print("Но что это так быстро движется на вас???")        
+            print()
+            time.sleep(2)
+            print(f"Это дух убитого вами волка, {knight.name}")
+            print()
+            time.sleep(2)
+            print("""Дракон умеют призывать души тех, кому вы навредили,
+волк бросился на вас, вы попытались отбиться, но безуспешно""")
+            print()
+            time.sleep(2)
+            print(f"""к сожалению, вы погибли, {knight.name}, волк и дракон взяли своё,
+теперь вы навсегда скованы вместе в мире мёртвых...""")
+            sys.exit()
+else:
+    time.sleep(4)
+    print()
+    print(f"""Вы послушались своего учителя, {knight.name}, и остались в городе, но вас нельзя назвать трусом,
+Вы всё ещё хотите победить дракона, вы приняли мудрое решение под руководством мудрого человека.
+Вам нужно много тренироваться !!!""")
+    print()
+    time.sleep(2)
+    print("Спустя несколько лет...")
+    print()
+    time.sleep(2)
+    print(f"""{knight.name}, вы только посмотрите на себя!!
+Да вы просто Геракл, все женщины восхищаются вами, у вас много друзей, вам даже не нужно идти за драконом...""")
+    print()
+    time.sleep(2)
+    print("В один прекрасный день вы идёте на очередную тренировку с друзьями...")
+    print()
+    time.sleep(2)
+    print()
+    print(f"""Когда вы остались наедине со своей подругой, она признаётся вам в любви и просит не идти за драконом,
+потому что боится потерять вас...""")
+    time.sleep(2)
+    print()
+    print(f"Вы отвечаете ей взаимностью, хотя всё равно намерены в будущем сразить дракона.")
+    time.sleep(2)
+    print()
+    print(f"Прошло несколько лет, {knight.name}, у вас уже красавица жена и... пивоварня...")
+    time.sleep(2)
+    print()
+    print(f"""Но в один день вы слышите рёв дракона, который проснулся,
+Есть риск того, что он нападёт на город...""")
+    time.sleep(2)
+    print()
+    print(f"""У вас есть несколько вариантов, {knight.name}:
+Чтобы остаться в городе, нажмите 1
+Чтобы Выйти за город и отвести дракона подальше, нажмите 2""")
+    print()
+    time.sleep(2)
+    choice_2 = input("Выберите продолжение : ")
+    print()
+    while choice_2 not in ["1", "2"]:
+        print("Введите 1 или 2 для продолжения!")
+        print()
+        choice_2 = input("Выберите продолжение : ")
+        print()
+    if choice_2=="1":
+        time.sleep(2)
+        print()
+        print("Вы выбрали остаться в городе, потому что не хотите оставлять свою жену и дело всей жизни - пивоварение.")
+        time.sleep(2)
+        print()
+        print("""в один день в город прилетает дракон...
+    Он очень зол..""")
+        time.sleep(2)
+        print()
+        print("Дракониус: давненько я не развлекался, пора повеселиться и отомстить вам, за то, что вы мешали мне спать своими шумными праздниками!")
+        time.sleep(2)
+        print()
+        print(f"Ваша жена говорит вам: 'Драться не вариант, может задобрим его твоим пивом, {knight.name}?'")
+        time.sleep(2)
+        print()
+        print(f"Дракон хорошо различает запахи и летит к вам!")
+        time.sleep(2)
+        print()
+        print(f"Дракониус: Вот черти, даже когда их жизни под угрозой пытаются напиться!")
+        print()
+        for i in range(10):
+            pivo = input("Нажмите 'enter', чтобы открыть бочку с пивом")
+            print()
+            while pivo!="":
+                print("Введите 'enter' для продолжения!")
+                print()
+                pivo = input("Нажмите 'enter', чтобы открыть бочку с пивом")
+                print()
+        time.sleep(2)
+        print()
+        print(f"""Дракон подлетает к пивоварне, но вы берёте топор {knight.name}, и рубите самую большую бочку с пивом под давлением,
+    оно летит прямо в лицо дракону!""")
+        time.sleep(2)
+        print()
+        print(f"""Дракониус: вот чёрт, как же вкусно, мхымххмы
+    Пжлуй отпщу ваас
+    НУ что встал, человечина, давай втрую бочкууу""")
+        time.sleep(2)
+        print()
+        print(f"""Теперь дракон самый главный заводила и пьяница в вашем городе,
+    но вам же лучше, теперь он жарит своим огнём шашлыки, катает детишек у себя  на хребте и пляшет на праздниках...""")
+        time.sleep(2)
+        print()
+        print(f"""Поздравляем, {knight.name}, это очень хороший вариант для вас всех!
+    Никто не мог предположить, что всё так закончится...""")
+        sys.exit()
+    else:
+        time.sleep(4)
+        print()
+        print(f"""Вы захотели отвести дракона подальше от города, {knight.name}, похвальное решение
+Вы тренируетесь за городом уже несколько месяцев, все просят вас вернуться, особенно жена,
+так как дракон успокоился и вроде как не собирается прилетать.
+В один вечер вы решили сходить домой.""")
+        time.sleep(2)
+        print()
+        print(f"""Жена: {knight.name}, ты наконец-то вернулся, где же ты пропадал?
+Ты герой, тренируешься, чтобы мы жили спокойно!
+Но я не хочу больше, чтобы ты уходил, я хочу, чтобы ты был со мной""")
+        time.sleep(3)
+        print()
+        print(f"""ЧТО? Ты опять хочешь уйти, нет, пожалуйста, останься, он не прилетит..
+Но у вас другое, предчувствие, {knight.name}, вы целуете жену, уходите, но обещаете вернуться.""")
+        time.sleep(2)
+        print()
+        print(f"Вы выходите из дома, открываете сундук и вытаскиваете оттуда первую попавшуюся вещь...")
+        time.sleep(2)
+        open_stone = ["sword", "guitar", "eggs"]
+        choice_stone = random.choice(open_stone)
+        print(f"Поздравляем, {knight.name}, вы взяли с собой {choice_stone}!")
+        print()
+        time.sleep(2)
+        print(f"Спустя несколько дней вы слышите рёв дракона где-то возле горы...")
+        print()
+        time.sleep(2)
+        print(f"Дракониус: Кто ты воин? Ты всё равно не остановишь меня, я спалю этот город до тла!!!")
+        dragon = kd.Dragon("Дракониус", random.randint(10, 15), 200, random.choice(["Файрбол", "Пинок"]))
+        print("Битва с Дракониусом: ")
+        print()
+        print(f"Ваш ход, {knight.name}")
+        print()
+        hit2 = input("Нажмите 1, чтобы ударить : ")
+        while hit2!="1":
+            hit2 = input("Нажмите 1, чтобы ударить : ")
+        while knight.health>0 or dragon.health>0:
+            knight.attack_power = random.randint(5, 8)
+            if knight.health<0 or dragon.health<0:
+                break
+            print("Ваша атака : ")
+            print()
+            knight.attack_power = random.randint(5, 8)
+            dragon.attack_power = random.randint(10, 15)
+            if knight.choice=="eggs":
+                print("Eggs!")
+                print()
+                dragon.health-=10
+                knight.health+=2
+                if knight.health<0 or dragon.health<0:
+                    break
+            elif knight.choice=="guitar":
+                print("Guitar!")
+                print()
+                dragon.health-=12
+                dragon.attack_power = random.randint(5, 8)
+                if knight.health<0 or dragon.health<0:
+                    break
+            else:
+                dragon.health-=15
+                print("Sword!")
+                print()
+                dragon.attack_power = random.randint(8, 10)
+                if knight.health<0 or dragon.health<0:
+                    break
+            if knight.health<0 or dragon.health<0:
+                break
+            dragon.choice = random.choice(["Файрбол", "Пинок"])
+            if knight.health<0 or dragon.health<0:
+                break
+            print(f"Здоровье {knight.name} : {knight.health}, Здоровье Дракониуса : {dragon.health}")
+            print()
+            time.sleep(2)
+            print()
+            print("Атака Дракониуса: ")
+            print()
+            if dragon.choice=="Файрбол":
+                print("Fireball !")
+                print()
+                knight.health-=dragon.attack_power
+                if knight.health<0 or dragon.health<0:
+                    break
+            else:
+                knight.health-=dragon.attack_power
+                print("хаха, теперь твоя атака ослабла!")
+                print()
+                knight.attack_power = random.randint(2, 5)
+                if knight.health<0 or dragon.health<0:
+                    break
+            print("Ваша атака : ")
+            dragon.health-=knight.attack_power
+            print("Обычный удар!")
+            print()
+            print(f"Здоровье {knight.name} : {knight.health}, Здоровье Дракониуса : {dragon.health}")
+            print()
+            time.sleep(2)
+        if knight.health<0:
+            print("Вы погибли")
+            sys.exit()
+        elif dragon.health<0:
+            print()
+            time.sleep(2)
+            print(f"Дракониус: НЕЕт, этого не может Быыыыть...")
+            print()
+            time.sleep(2)
+            print(f"""вы уже рады, что свергли дракона, но он оборачивается и протыкает вас когтем в самое сердце
+Дракониус: ты уйдёшь вместе со мной...""")
+            print()
+            time.sleep(2)
+            print(f"""{knight.name}, вы герой, вы сразили дракона, у вас даже есть силы идти домой!!!
+С вас бежит сильный ручей крови,
+вы задыхаетесь, но хотите ещё раз увидеть жену,
+В городе тихо, потому что все попрятались по домам.""")
+            print()
+            time.sleep(2)
+            print(f"""Вы подходите к двери своего дома, вы вот вот потеряете сознание.
+Вы открываете, дверь нэйм, и видете мужчину с голым торсом, который сидит на вашей кровати...
+Ваша жена видит вас и начинает плакать!""")
+            print()
+            time.sleep(4)
+            print(f"""Жена: Простиии, неееет, нэйм, простии меня, тебя не было так долго, я, яя не хотела этого, я никогда не прощу себя, неет, пожалуйста не умирай
+Вы падаете на колени, {knight.name}, кашляете сгустками крови, плачете, и падаете замертво...""")
+            print()
+            time.sleep(5)
+            print(f"""Вы открываете глаза, {knight.name}, где же вы???
+Остров, пляж, Дракониус??
+Дракониус: Как же мне жаль тебя парень, ты ведь правда герой, зачем мы вообще всё это делали...
+Зачем бились? Ради чего?
+Ну, раз уж мы теперь здесь, давай выпьем пива на этом чудесном острове...""")
+            print()
+            time.sleep(5)
+            print(f"""Прошло много лет, жена живёт теперь с тем мужчиной, но всё ещё не может простить себя за измену,
+Люди благословляют вас, некоего {knight.name},
+который спас их от дракона, и именно в этот день, каждый год чувствуется запах пиво в воздухе и слышится откуда-то рык дракона,
+а моряки, которые проплывают около деревни, поговаривают, что видят странные силуэты рыцаря и огромного чудища, которые сидят на одном из островов и пьют что-то...""")
+            sys.exit()
