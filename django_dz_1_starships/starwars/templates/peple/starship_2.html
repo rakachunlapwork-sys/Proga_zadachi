@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{name}} - Архивы Повстанческого Альянса</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a2a, #1a1a4a);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            border: 2px solid #ffe81f;
+        }
+
+        .title {
+            font-size: 3em;
+            color: #ffe81f;
+            text-shadow: 0 0 10px rgba(255, 232, 31, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #4bd5ee;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .ship-image {
+            background: linear-gradient(45deg, #2a2a5a, #1a1a3a);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #4bd5ee;
+        }
+
+        .ship-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .ship-info {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #ff6b6b;
+        }
+
+        .info-section {
+            margin-bottom: 25px;
+        }
+
+        .info-title {
+            color: #ffe81f;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #4bd5ee;
+            padding-bottom: 5px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-item {
+            margin-bottom: 8px;
+        }
+
+        .info-label {
+            color: #4bd5ee;
+            font-weight: bold;
+        }
+
+        .info-value {
+            color: #fff;
+        }
+
+        .pilots-section, .films-section {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 2px solid #9b59b6;
+        }
+
+        .pilots-grid, .films-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .pilot-card, .film-card {
+            background: linear-gradient(45deg, #2a2a5a, #3a3a6a);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .pilot-card:hover, .film-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 232, 31, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            border: 1px solid #666;
+            margin-top: 40px;
+        }
+
+        .crawl-text {
+            font-style: italic;
+            color: #ffe81f;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">{{name}} - {{starship_class}}</h1>
+            <p class="subtitle">{{model}} - The Rebel Alliance's Finest</p>
+        </header>
+
+        <div class="content">
+            <div class="ship-image">
+                <!-- Placeholder for ship image -->
+                <div style="background: #1a1a3a; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10px; margin-bottom: 20px;">
+                    <span style="color: #ffe81f; font-size: 1.2em;">X-wing Starfighter Image</span>
+                </div>
+                <p>The iconic starfighter of the Rebel Alliance</p>
+            </div>
+
+            <div class="ship-info">
+                <div class="info-section">
+                    <h2 class="info-title">Technical Specifications</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Model:</span>
+                            <span class="info-value">{{model}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Manufacturer:</span>
+                            <span class="info-value">{{manufacturer}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Cost:</span>
+                            <span class="info-value">{{cost_in_credits}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Length:</span>
+                            <span class="info-value">{{length}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Max Speed:</span>
+                            <span class="info-value">{{max_atmosphering_speed}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Crew:</span>
+                            <span class="info-value">{{crew}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Passengers:</span>
+                            <span class="info-value">{{passengers}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Cargo Capacity:</span>
+                            <span class="info-value">{{cargo_capacity}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2 class="info-title">Performance Data</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Hyperdrive:</span>
+                            <span class="info-value">{{hyperdrive_rating}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">MGLT:</span>
+                            <span class="info-value">{{MGLT}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Consumables:</span>
+                            <span class="info-value">{{consumables}}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Class:</span>
+                            <span class="info-value">{{starship_class}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pilots-section">
+            <h2 class="info-title">Famous Pilots</h2>
+            <div class="pilots-grid">
+                {% for pilot in pilots %}
+                <div class="pilot-card">
+                    <h3>{{pilot.0}}</h3>
+                    <p>{{pilot.1}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="films-section">
+            <h2 class="info-title">Film Appearances</h2>
+            <div class="films-grid">
+                {% for film in films %}
+                <div class="film-card">
+                    <h3>{{film}}</h3>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="crawl-text">"The Force will be with you, always." - Obi-Wan Kenobi</p>
+            <p>Star Wars API Data | SWAPI.dev</p>
+        </footer>
+    </div>
+</body>
+</html>
