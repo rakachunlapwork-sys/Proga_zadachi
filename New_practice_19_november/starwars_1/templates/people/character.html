@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГАЛАКТИЧЕСКАЯ БАЗА ДАННЫХ - LUKE SKYWALKER</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000000;
+            color: #00ff00;
+            min-height: 100vh;
+            line-height: 1.4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+
+        .status-bar {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1em;
+            color: #ffff00;
+            padding: 8px;
+            border: 1px solid #00ff00;
+            background: rgba(0, 255, 0, 0.05);
+        }
+
+        .character-profile {
+            border: 2px solid #00ff00;
+            padding: 25px;
+            background: rgba(0, 255, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #00ff00;
+        }
+
+        .character-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #00ff00, #ffff00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-right: 20px;
+            color: #000;
+            border: 2px solid #00ff00;
+        }
+
+        .character-name {
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ffff00;
+        }
+
+        .character-id {
+            font-size: 0.9em;
+            color: #00ffff;
+            margin-top: 5px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .info-section {
+            border: 1px solid #00ff00;
+            padding: 15px;
+            background: rgba(0, 255, 0, 0.03);
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            color: #ffff00;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 5px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding: 5px 0;
+            border-bottom: 1px dashed rgba(0, 255, 0, 0.3);
+        }
+
+        .info-label {
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        .info-value {
+            color: #ffffff;
+            text-align: right;
+        }
+
+        .list-section {
+            margin-top: 10px;
+        }
+
+        .list-item {
+            background: rgba(0, 255, 0, 0.1);
+            padding: 5px 10px;
+            margin: 3px 0;
+            border-left: 3px solid #00ff00;
+            font-size: 0.9em;
+        }
+
+        .status-indicator {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ff4444;
+            background: rgba(255, 68, 68, 0.1);
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            border-top: 1px solid #00ff00;
+            color: #888;
+            font-size: 0.8em;
+            background: rgba(0, 255, 0, 0.05);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 8px 20px;
+            margin-bottom: 20px;
+            border: 1px solid #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 255, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="{%url 'all_character'%}" class="back-button">← НАЗАД К СПИСКУ</a>
+
+        <div class="header">
+            <h1>ГАЛАКТИЧЕСКАЯ БАЗА ДАННЫХ</h1>
+            <p>ДЕТАЛЬНАЯ ИНФОРМАЦИЯ О СУЩЕСТВЕ</p>
+        </div>
+
+        <div class="status-bar">
+            ████████████████████████████████████████ 100%
+        </div>
+
+        <div class="character-profile">
+            <div class="profile-header">
+                <div class="character-avatar">LS</div>
+                <div>
+                    <div class="character-name">{{name}}</div>
+                    <div class="character-id">ИДЕНТИФИКАТОР: 0 | СТАТУС: АКТИВЕН</div>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <!-- Основная информация -->
+                <div class="info-section">
+                    <div class="section-title">ФИЗИЧЕСКИЕ ПАРАМЕТРЫ</div>
+                    <div class="info-row">
+                        <span class="info-label">Рост:</span>
+                        <span class="info-value">{{height}}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Масса:</span>
+                        <span class="info-value">{{mass}}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Цвет волос:</span>
+                        <span class="info-value">{{hair_color}}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Цвет кожи:</span>
+                        <span class="info-value">{{skin_color}}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Цвет глаз:</span>
+                        <span class="info-value">{{eye_color}}</span>
+                    </div>
+                </div>
+
+                <!-- Биографические данные -->
+                <div class="info-section">
+                    <div class="section-title">БИОГРАФИЯ</div>
+                    <div class="info-row">
+                        <span class="info-label">Год рождения:</span>
+                        <span class="info-value">{{birth_date}}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Пол:</span>
+                        <span class="info-value">{{gender}}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Родная планета:</span>
+                        <span class="info-value">{{homeworld}}</span>
+                    </div>
+                </div>
+
+                <!-- Появления в фильмах -->
+                <div class="info-section">
+                    <div class="section-title">ФИЛЬМОГРАФИЯ</div>
+                    <div class="info-row">
+                        <span class="info-label">Количество фильмов:</span>
+                        <span class="info-value">4</span>
+                    </div>
+                    <div class="list-section">
+                        <div class="list-item">Эпизод IV: Новая надежда</div>
+                        <div class="list-item">Эпизод V: Империя наносит ответный удар</div>
+                        <div class="list-item">Эпизод VI: Возвращение джедая</div>
+                        <div class="list-item">Эпизод III: Месть ситхов</div>
+                    </div>
+                </div>
+
+                <!-- Транспортные средства -->
+                <div class="info-section">
+                    <div class="section-title">ТРАНСПОРТНЫЕ СРЕДСТВА</div>
+                    <div class="info-row">
+                        <span class="info-label">Количество:</span>
+                        <span class="info-value">2</span>
+                    </div>
+                    <div class="list-section">
+                        <div class="list-item">Снежный спидер T-47</div>
+                        <div class="list-item">Летающий транспорт X-34</div>
+                    </div>
+                </div>
+
+                <!-- Звездные корабли -->
+                <div class="info-section">
+                    <div class="section-title">ЗВЁЗДНЫЕ КОРАБЛИ</div>
+                    <div class="info-row">
+                        <span class="info-label">Количество:</span>
+                        <span class="info-value">2</span>
+                    </div>
+                    <div class="list-section">
+                        <div class="list-item">X-wing истребитель</div>
+                        <div class="list-item">Лёгкий грузовой корабль</div>
+                    </div>
+                </div>
+
+                <!-- Вид -->
+                <div class="info-section">
+                    <div class="section-title">ВИДОВАЯ ПРИНАДЛЕЖНОСТЬ</div>
+                    <div class="info-row">
+                        <span class="info-label">Вид:</span>
+                        <span class="info-value">HUMAN</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Классификация:</span>
+                        <span class="info-value">МЛЕКОПИТАЮЩЕЕ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-indicator">
+                СТАТУС: АКТИВЕН | УРОВЕНЬ УГРОЗЫ: НИЗКИЙ | ПРИНАДЛЕЖНОСТЬ: ПОВСТАНЕЦ
+            </div>
+        </div>
+
+        <div class="footer">
+            КАТЕГОРИЯ: РАЗУМНЫЕ СУЩЕСТВА | БАЗА ДАННЫХ: SWAPI<br>
+            ОБНОВЛЕНО: 2014-12-20 | ИДЕНТИФИКАТОР: https://swapi.dev/api/people/1/
+        </div>
+    </div>
+</body>
+</html>
