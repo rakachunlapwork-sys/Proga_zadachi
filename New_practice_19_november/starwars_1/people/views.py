@@ -1896,7 +1896,7 @@ def get_all_character(request):
         buff_dict["gender"] = value["gender"]
         character_list.append(buff_dict)
     
-    return render(request, "people/character.html", {"characters":character_list})
+    return render(request, "people/allcharacter.html", {"characters":character_list})
 
 def get_character(request, id):
     data = read_data()
